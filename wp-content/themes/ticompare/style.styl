@@ -1,0 +1,460 @@
+/*!
+Theme Name: ticompare
+Theme URI: 
+Author: Daniel Avalos
+Author URI: 
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import 'nib'
+
+// Color Palette
+fontColorGreyDark = #333
+fontColorGreyLight = #777
+fontColorAlmostWhite = #ddd
+bgColor = #fff
+colorRed = #d13a25
+colorRedDark = #911F0F
+colorYellow = #FFB60B
+
+//Fonts
+fontSize = 16px
+fontFamily = Verdana, Arial, Helvetica
+
+//images
+socialIconsImage = "images/social-icons.png"
+
+* 
+	box-sizing border-box
+
+a
+	text-decoration none
+
+article
+	h1
+		border-bottom 2px solid colorYellow
+		font-size 1.2em
+		padding-bottom 0.25em
+		color colorRed
+			
+
+body 
+	background-color #fff
+	color fontColorGreyDark
+	font fontSize fontFamily
+	overflow-x hidden
+
+body
+html
+#page
+	height 100%
+
+dd
+	margin 0
+
+footer
+	background-color colorRed
+	position relative
+	text-align center
+	width 100%
+
+	ul 
+		padding 1em 0
+		margin 0
+
+		li
+			display inline-block
+			margin 0.5em
+
+			a
+				background-image url(socialIconsImage)
+				background-repeat no-repeat
+				display inline-block
+				height 74px
+				margin 0 auto
+				width 74px
+
+			&#facebook-icon 
+				a:hover
+					background-position 0 -75px
+
+			&#google-icon 
+				a
+					background-position -152px 0
+
+					&:hover
+						background-position -152px -75px
+
+			&#twitter-icon
+				a
+					background-position -76px 0
+
+					&:hover
+						background-position -76px -75px
+
+form
+	input
+	label
+	textarea
+		width 100%
+
+h2
+	border-bottom 2px solid colorYellow
+	font-size 1.2em
+	padding-bottom 0.25em
+
+h3
+	color colorYellow
+
+	span
+		color colorRed
+
+header 
+	background-color colorRed
+	border-bottom 1px solid bgColor
+	color fontColorAlmostWhite
+	float left
+	padding 1em 0
+	position fixed
+	width 100%
+	z-index 2
+
+	div.top
+		float left
+
+		&.edge
+			width 15%
+
+		&.center	
+			width 70%
+
+		figure
+			float left
+			margin 0
+			width 48px
+
+			a
+				display block
+				height 100%
+
+		&.right
+			figure
+				float right
+
+	h1
+		font-size 1.2em
+		margin 0
+		padding 0.2em 0
+		text-align center
+		vertical-align text-bottom
+
+
+img 
+	display inline-block
+	width 100%
+
+li 
+	list-style none
+
+nav
+	box-shadow inset -1.5em 0 1.5em -0.75em rgba(0,0,0,0.25)
+	float left
+	left -50%
+	transition left 500ms ease
+	width 50%
+
+	div
+		ul
+			li
+				a:hover
+					text-shadow 1px 1px 1px bgColor
+					
+				&.current-menu-item
+					background-color colorYellow
+
+					a
+						color fontColorGreyDark
+
+						&:hover
+							text-shadow 1px 1px 1px fontColorGreyDark
+
+	&.moved
+		left 0
+
+p
+	color fontColorGreyLight
+	text-align justify
+
+p img
+	display block
+	margin 0 auto
+
+section
+	background-color bgColor
+	position relative
+	width 100%
+	z-index 1
+
+ul
+	margin 0
+	padding 0
+
+#container
+	padding-top 4em
+
+#page
+	display table
+	position relative
+	width 100%
+
+#page-wrapper
+	height 100%
+	left 0
+	position relative
+	transition left 500ms ease, right 500ms ease
+	top 0
+	width 100%
+
+	&.moved
+		left 50%
+
+	&.moved-left
+		left -25%
+
+#respond
+	padding 1em
+
+#sidebar
+	box-shadow inset 1.5em 0 1.5em -0.75em rgba(0,0,0,0.25)
+	right -25%
+	transition right 500ms ease
+	width 25%
+
+	&.moved-left
+		right 0
+
+	ul
+		float right
+		width 100%
+
+		li
+			padding 1em 0
+			width 100%
+
+			a
+				box-sizing content-box
+				display block
+				padding 0
+				text-align center
+
+				img
+					width 16px
+
+#simple-page 
+	dl
+		dd
+			figure
+				max-width 187px
+
+#wrapper
+	overflow hidden
+	margin 0 auto
+	max-width 70em
+	width 100%
+
+.author
+	font-size .75em
+	font-style italic
+
+	span
+		color colorYellow
+
+.bold
+	font-weight bold
+
+.hide
+	background-color colorRed
+	height 100%
+	position fixed
+	top 0
+	z-index 0
+
+	.side
+		overflow hidden
+		width 100%
+
+		ul 
+			li
+				&:not(:first-child)
+					border-top 1px solid rgba(255,255,255,0.3)
+
+				&:last-child
+					border-bottom 1px solid rgba(255,255,255,0.3) 
+
+				a
+					color bgColor
+					display inline-block
+					font-size 0.9em
+					padding 1em 1em 1em 2em
+					width 100%
+
+.link
+	a:hover
+		text-decoration underline
+		
+
+.more-link
+	@extend .bold
+	font-size 0.8em
+	color #000
+
+.page-row
+	display table-row
+
+.page-row-expanded
+	height 100%
+
+.posts
+	padding 1em
+
+	article 
+		
+		figure
+			padding 0
+			margin 0 auto
+			max-width 556px
+
+			a
+				display block
+
+
+@media only screen and (min-width: 44em)
+
+	article
+		&:not(:last-child)
+			border-bottom 2px solid colorYellow
+		h1
+			border none
+
+	dl
+		margin 1em 0
+
+		dd
+			overflow hidden
+
+			figure
+				float left
+				width 20%
+			p
+				float left
+				padding-left 1em
+				margin 0
+				width 80%
+
+	h2
+		border none
+
+	header
+		border none
+		box-shadow 1px 1px 13px colorRedDark
+		position relative
+
+		div.top.center
+			width 100%
+
+		h1
+			border-bottom 1px solid bgColor
+			display block
+			margin 0 auto
+			max-width 40em
+			padding-bottom 1em
+
+	footer
+		clear both
+
+	form 
+		input
+			width 40%
+
+		label
+			display block
+
+	nav.hide
+		transition none
+		box-shadow none
+		left 0
+		margin-top 1em
+		position relative
+		text-align center
+		width 100%
+
+		.side
+			margin 0 auto
+			width 100%
+
+			ul
+				padding .2em 0
+				width 100%
+
+				li
+					border none !important
+					display inline-block
+
+					a
+						display block
+						padding 1em
+
+	section
+		border 1px solid fontColorGreyLight
+		border-radius 5px
+		float left
+		margin 1em 0
+		padding 0
+		width 90%
+
+	#container
+		padding 0
+
+	#page
+	#sidebar
+		transition none
+
+	#logo
+	#options
+		display none
+
+	#page
+		&.moved
+		&.moved-left
+			left 0
+
+	#sidebar
+		background-color bgColor
+		box-shadow none
+		float left
+		margin 1em 0
+		right 0
+		position relative
+		width 10%
+
+	#wrapper
+		max-width 60em
+		width 90%
+
+	.author
+		margin-top -.5em
+
+	.side 
+		ul 
+			li:not(:first-child)
+			li:last-child
+				border none
+
+			li.current-menu-item
+				border-radius 5px
